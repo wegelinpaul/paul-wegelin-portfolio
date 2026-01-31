@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Wegelin's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Theme toggle – placed early so :has() can see it -->
+    <div class="theme-toggle">
+      <input type="checkbox" id="theme-switch" class="theme-switch-input">
+      <label for="theme-switch" class="theme-switch-label" aria-label="Toggle between light and dark mode">
+        <span class="switch-track">
+          <span class="switch-icons">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+          </span>
+          <span class="switch-knob"></span>
+        </span>
+      </label>
+    </div>
+
+    <!-- Hero / Introduction -->
+    <header class="hero">
+        <div class="hero-content">
+            <img src="images/me.jpeg" alt="Profile placeholder" class="profile-photo">
+            <h1>Paul Wegelin</h1>
+            <p class="tagline">Building tools, exploring data, and turning ideas into reality</p>
+            <p class="tagline">Always eager to learn and develop my character</p>
+            <a href="#projects" class="btn">See My Work ↓</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            I'm based in Stuttgart and passionate about Algorithims, Finance, Coding, 
+            and creating useful tools. From TradingView indicators to full personal projects — 
+            I love the process of going from idea → something tangible. Never stop looking for the next challenge!
+        </p>
+        <p>
+            Right now i'm diving into learning Python and create more sophisticated investing Algorithims.
+            Python will elevate me to the next level in data analysis and automation.
+        </p>
+    </section>
+
+    <!-- Skills / Tools -->
+    <section id="skills" class="section">
+        <h2>Tools & Technologies</h2>
+        <div class="skills-container">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Pine Script</span>
+            <span class="skill-tag">HTML + CSS</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">TradingView</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <h2>Current Projects</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <a href="https://www.tradingview.com/script/yg9oWibK-CCI-Standard-Deviation/" 
+                        class="stretched-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                    <div class="project-image">
+                        <img src="images/CCISD.png" alt="TradingView Custom Indicators preview">
+                    </div>
+                    <h3>
+                        CCI Standard Deviation 
+                    </h3>
+                    <p>A custom TradingView indicator that combines CCI with standard deviation to identify volatility and trend strength.</p>          
+                </a>      
+            </div>
+
+            <div class="project-card">
+                <a href="https://www.tradingview.com/script/7aUUCr3m-RSI-Median-Deviation/" 
+                        class="stretched-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                    <div class="project-image">
+                        <img src="images/RSIMD.png" alt="TradingView Custom Indicators preview">
+                    </div>
+                    <h3>
+                        RSI Median Deviation                    
+                    </h3>
+                    <p>A custom TradingView indicator that combines RSI with median deviation to identify overbought/oversold conditions.</p>   
+                </a>    
+            </div>
+
+            <div class="project-card">
+                    <a href="https://www.tradingview.com/script/S69JxzUZ/" 
+                        class="stretched-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                    <div class="project-image">
+                        <img src="images/RSIFL.png" alt="TradingView Custom Indicators preview">
+                    </div>
+                    <h3>
+                        RSI For Loop
+                    </h3>
+                    <p>A custom TradingView indicator that uses a for loop to calculate RSI trend strength.</p>
+                </a>
+            </div>
+
+            <div class="project-card">
+                <a href="https://www.tradingview.com/script/dOFYcBG2-Logarithmic-Fair-Value-Anchor-PW/" 
+                        class="stretched-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                    <div class="project-image">
+                        <img src="images/LogFVA.png" alt="TradingView Custom Indicators preview">
+                    </div>
+                    <h3>   
+                        Logarithmic Fair Value Anchor                  
+                    </h3>
+                    <p>A custom TradingView indicator that calculates a logarithmic fair value anchor for price analysis.</p>
+                </a>
+            </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer class="footer">
+        <p>Let's connect</p>
+        <div class="social-links">
+            <a href="https://x.com/Claygonius" target="_blank" rel="noopener noreferrer">X / @Claygonius</a>
+            <a href="mailto:wegelin.paul@gmail.com">Email</a>
+            <!-- Add LinkedIn, GitHub later if you want -->
+        </div>
+        <p class="copyright">© 2026 Paul Wegelin</p>
+    </footer>
+
+</body>
+</html>

@@ -547,13 +547,26 @@ p {
    Stats Section
    ========================================================================== */
 .stats-section {
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-    color: white;
+    background: var(--bg-card);
     padding: 80px 20px;
+    position: relative;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.03) 0%, rgba(99, 102, 241, 0.05) 100%);
+    pointer-events: none;
 }
 
 .stats-section h2 {
-    color: white;
+    color: var(--text-heading);
+    position: relative;
+    z-index: 1;
 }
 
 .stats-grid {
@@ -562,21 +575,24 @@ p {
     gap: 32px;
     max-width: 1000px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .stat-card {
     text-align: center;
-    padding: 24px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s, background 0.3s;
+    padding: 32px 24px;
+    background: var(--bg-card);
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px var(--shadow);
 }
 
 .stat-card:hover {
     transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px var(--shadow);
 }
 
 .stat-number {
@@ -584,12 +600,15 @@ p {
     font-weight: 700;
     font-family: 'Playfair Display', serif;
     margin-bottom: 8px;
-    color: white;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .stat-label {
     font-size: 1rem;
-    opacity: 0.95;
+    color: var(--text-main);
     font-weight: 500;
 }
 

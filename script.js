@@ -67,12 +67,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Load theme preference from localStorage
+    // Load theme preference from localStorage - default to dark mode
     const themeSwitch = document.getElementById('theme-switch');
     const savedTheme = localStorage.getItem('theme');
 
-    if (savedTheme === 'dark') {
+    // Default to dark mode if no preference is saved
+    if (savedTheme === 'light') {
+        themeSwitch.checked = false;
+    } else {
+        // Default to dark mode (when savedTheme is null or 'dark')
         themeSwitch.checked = true;
+        if (!savedTheme) {
+            localStorage.setItem('theme', 'dark');
+        }
     }
 
     // Save theme preference

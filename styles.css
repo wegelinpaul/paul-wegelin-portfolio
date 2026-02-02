@@ -547,7 +547,7 @@ p {
    Stats Section
    ========================================================================== */
 .stats-section {
-    background: var(--bg-card);
+    background: #f3f4f6;
     padding: 80px 20px;
     position: relative;
 }
@@ -582,17 +582,17 @@ p {
 .stat-card {
     text-align: center;
     padding: 32px 24px;
-    background: var(--bg-card);
+    background: white;
     border-radius: 20px;
-    border: 2px solid var(--border-color);
+    border: 2px solid rgba(79, 70, 229, 0.15);
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px var(--shadow);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.08), 0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
 .stat-card:hover {
     transform: translateY(-8px);
-    border-color: var(--accent);
-    box-shadow: 0 8px 24px var(--shadow);
+    border-color: rgba(79, 70, 229, 0.4);
+    box-shadow: 0 12px 28px rgba(79, 70, 229, 0.15), 0 6px 12px rgba(79, 70, 229, 0.1);
 }
 
 .stat-number {
@@ -621,11 +621,13 @@ p {
     .stat-card {
         background: rgba(31, 41, 55, 0.5);
         border: 1px solid rgba(129, 140, 248, 0.2);
+        box-shadow: 0 2px 8px var(--shadow);
     }
 
     .stat-card:hover {
         background: rgba(31, 41, 55, 0.8);
         border-color: var(--accent);
+        box-shadow: 0 8px 24px var(--shadow);
     }
 }
 
@@ -637,11 +639,13 @@ body:has(.theme-switch-input:checked) .stats-section {
 body:has(.theme-switch-input:checked) .stat-card {
     background: rgba(31, 41, 55, 0.5);
     border: 1px solid rgba(129, 140, 248, 0.2);
+    box-shadow: 0 2px 8px var(--shadow);
 }
 
 body:has(.theme-switch-input:checked) .stat-card:hover {
     background: rgba(31, 41, 55, 0.8);
     border-color: var(--accent);
+    box-shadow: 0 8px 24px var(--shadow);
 }
 
 @media (max-width: 768px) {

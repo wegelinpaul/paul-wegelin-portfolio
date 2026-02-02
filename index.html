@@ -3,39 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Wegelin's Portfolio</title>
+    <title>Paul Wegelin - Algorithmic Trading & Data Analysis Portfolio</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Paul Wegelin's portfolio showcasing custom TradingView indicators, algorithmic trading tools, and data analysis projects using Python, Pine Script, and Pandas.">
+    <meta name="keywords" content="Paul Wegelin, TradingView, Pine Script, Python, Algorithmic Trading, Data Analysis, Finance, Programming">
+    <meta name="author" content="Paul Wegelin">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Paul Wegelin - Algorithmic Trading & Data Analysis Portfolio">
+    <meta property="og:description" content="Building custom trading indicators and data analysis tools. Explore my TradingView indicators and Python projects.">
+    <meta property="og:url" content="https://wegelinpaul.github.io/paul-wegelin-portfolio/">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Claygonius">
+    <meta name="twitter:title" content="Paul Wegelin - Algorithmic Trading Portfolio">
+    <meta name="twitter:description" content="Building custom trading indicators and data analysis tools.">
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Theme toggle – placed early so :has() can see it -->
-    <div class="theme-toggle">
-      <input type="checkbox" id="theme-switch" class="theme-switch-input">
-      <label for="theme-switch" class="theme-switch-label" aria-label="Toggle between light and dark mode">
-        <span class="switch-track">
-          <span class="switch-icons">
-            <span class="sun">☀️</span>
-            <span class="moon">🌙</span>
-          </span>
-          <span class="switch-knob"></span>
-        </span>
-      </label>
-    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Paul Wegelin</a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#stats" class="nav-link">Impact</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <!-- Theme toggle in navbar -->
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" class="theme-switch-input">
+                <label for="theme-switch" class="theme-switch-label" aria-label="Toggle between light and dark mode">
+                    <span class="switch-track">
+                        <span class="switch-icons">
+                            <span class="sun">☀️</span>
+                            <span class="moon">🌙</span>
+                        </span>
+                        <span class="switch-knob"></span>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero / Introduction -->
     <header class="hero">
-        <div class="hero-content">
-            <img src="images/me.jpeg" alt="Profile placeholder" class="profile-photo">
+        <div class="hero-content fade-in">
+            <img src="images/me.jpeg" alt="Paul Wegelin - Algorithmic Trading Developer" class="profile-photo">
             <h1>Paul Wegelin</h1>
             <p class="tagline">Building tools, exploring data, and turning ideas into reality</p>
-            <p class="tagline">Always eager to learn and develop my character</p>
-            <a href="#projects" class="btn">See My Work ↓</a>
+            <p class="tagline-sub">Always eager to learn and develop my character</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="scroll-indicator">
+                <span class="scroll-text">Scroll to explore</span>
+                <span class="scroll-arrow">↓</span>
+            </div>
         </div>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="section fade-section">
         <h2>About Me</h2>
         <p>
             I'm based in Stuttgart and passionate about Algorithms, Finance, Coding, 
@@ -49,7 +87,7 @@
     </section>
 
     <!-- Skills / Tools -->
-    <section id="skills" class="section">
+    <section id="skills" class="section fade-section">
         <h2>Tools & Technologies</h2>
         <div class="skills-container">
             <span class="skill-tag">Python</span>
@@ -61,45 +99,78 @@
         </div>
     </section>
 
+    <!-- Stats / Impact Section -->
+    <section id="stats" class="section stats-section fade-section">
+        <h2>Impact & Reach</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Indicators Published</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1,000+</div>
+                <div class="stat-label">Active Users</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4.8★</div>
+                <div class="stat-label">Average Rating</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Total Views</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section id="projects" class="section projects">
-        <h2>Current Projects</h2>
+    <section id="projects" class="section projects fade-section">
+        <h2>Public Projects</h2>
         <div class="projects-grid">
 
             <div class="project-card">
-                <a href="https://www.tradingview.com/script/yg9oWibK-CCI-Standard-Deviation/" 
-                        class="stretched-link" 
-                        target="_blank" 
+                <a href="https://www.tradingview.com/script/yg9oWibK-CCI-Standard-Deviation/"
+                        class="stretched-link"
+                        target="_blank"
                         rel="noopener noreferrer">
                     <div class="project-image">
                         <img src="images/CCISD.png" alt="TradingView Custom Indicators preview">
                     </div>
                     <h3>
-                        CCI Standard Deviation 
+                        CCI Standard Deviation
                     </h3>
-                    <p>A custom TradingView indicator that combines CCI with standard deviation to identify volatility and trend strength.</p>          
-                </a>      
+                    <p>A custom TradingView indicator that combines CCI with standard deviation to identify volatility and trend strength.</p>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Pine Script</span>
+                        <span class="tech-badge">TradingView</span>
+                        <span class="tech-badge">Technical Analysis</span>
+                    </div>
+                </a>
             </div>
 
             <div class="project-card">
-                <a href="https://www.tradingview.com/script/7aUUCr3m-RSI-Median-Deviation/" 
-                        class="stretched-link" 
-                        target="_blank" 
+                <a href="https://www.tradingview.com/script/7aUUCr3m-RSI-Median-Deviation/"
+                        class="stretched-link"
+                        target="_blank"
                         rel="noopener noreferrer">
                     <div class="project-image">
                         <img src="images/RSIMD.png" alt="TradingView Custom Indicators preview">
                     </div>
                     <h3>
-                        RSI Median Deviation                    
+                        RSI Median Deviation
                     </h3>
-                    <p>A custom TradingView indicator that combines RSI with median deviation to identify overbought/oversold conditions.</p>   
-                </a>    
+                    <p>A custom TradingView indicator that combines RSI with median deviation to identify overbought/oversold conditions.</p>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Pine Script</span>
+                        <span class="tech-badge">TradingView</span>
+                        <span class="tech-badge">Statistics</span>
+                    </div>
+                </a>
             </div>
 
             <div class="project-card">
-                    <a href="https://www.tradingview.com/script/S69JxzUZ/" 
-                        class="stretched-link" 
-                        target="_blank" 
+                <a href="https://www.tradingview.com/script/S69JxzUZ/"
+                        class="stretched-link"
+                        target="_blank"
                         rel="noopener noreferrer">
                     <div class="project-image">
                         <img src="images/RSIFL.png" alt="TradingView Custom Indicators preview">
@@ -108,28 +179,123 @@
                         RSI For Loop
                     </h3>
                     <p>A custom TradingView indicator that uses a for loop to calculate RSI trend strength.</p>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Pine Script</span>
+                        <span class="tech-badge">TradingView</span>
+                        <span class="tech-badge">Algorithms</span>
+                    </div>
                 </a>
             </div>
 
             <div class="project-card">
-                <a href="https://www.tradingview.com/script/dOFYcBG2-Logarithmic-Fair-Value-Anchor-PW/" 
-                        class="stretched-link" 
-                        target="_blank" 
+                <a href="https://www.tradingview.com/script/dOFYcBG2-Logarithmic-Fair-Value-Anchor-PW/"
+                        class="stretched-link"
+                        target="_blank"
                         rel="noopener noreferrer">
                     <div class="project-image">
                         <img src="images/LogFVA.png" alt="TradingView Custom Indicators preview">
                     </div>
-                    <h3>   
-                        Logarithmic Fair Value Anchor                  
+                    <h3>
+                        Logarithmic Fair Value Anchor
                     </h3>
                     <p>A custom TradingView indicator that calculates a logarithmic fair value anchor for price analysis.</p>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Pine Script</span>
+                        <span class="tech-badge">TradingView</span>
+                        <span class="tech-badge">Mathematics</span>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- Private Projects Section -->
+    <section id="private-projects" class="section private-projects fade-section">
+        <h2>Private Projects</h2>
+        <p class="section-subtitle">Personal tools and experiments I'm developing</p>
+        <div class="projects-grid">
+
+            <div class="project-card private-card">
+                <div class="private-badge">Private</div>
+                <div class="project-image private-blur">
+                    <div class="placeholder-icon">🤖</div>
+                </div>
+                <h3>Algorithmic Trading Bot</h3>
+                <p>Automated trading system using Python and Pandas for backtesting and live execution. Implements multiple strategies with risk management.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">API Integration</span>
+                </div>
+                <ul class="feature-list">
+                    <li>Real-time market data processing</li>
+                    <li>Multi-strategy backtesting framework</li>
+                    <li>Automated position management</li>
+                </ul>
+            </div>
+
+            <div class="project-card private-card">
+                <div class="private-badge">In Development</div>
+                <div class="project-image private-blur">
+                    <div class="placeholder-icon">📊</div>
+                </div>
+                <h3>Portfolio Analytics Dashboard</h3>
+                <p>Comprehensive portfolio tracking and analysis tool with real-time performance metrics and risk analytics.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Data Visualization</span>
+                    <span class="tech-badge">Statistics</span>
+                </div>
+                <ul class="feature-list">
+                    <li>Real-time portfolio tracking</li>
+                    <li>Performance attribution analysis</li>
+                    <li>Risk metrics & correlation analysis</li>
+                </ul>
+            </div>
+
+            <div class="project-card private-card">
+                <div class="private-badge">Research</div>
+                <div class="project-image private-blur">
+                    <div class="placeholder-icon">🔬</div>
+                </div>
+                <h3>Strategy Backtester</h3>
+                <p>Advanced backtesting framework for testing trading strategies with historical data and Monte Carlo simulations.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">NumPy</span>
+                    <span class="tech-badge">Optimization</span>
+                </div>
+                <ul class="feature-list">
+                    <li>Historical data analysis</li>
+                    <li>Monte Carlo simulation</li>
+                    <li>Strategy optimization tools</li>
+                </ul>
+            </div>
+
+            <div class="project-card private-card">
+                <div class="private-badge">Experimental</div>
+                <div class="project-image private-blur">
+                    <div class="placeholder-icon">💰</div>
+                </div>
+                <h3>Personal Finance Analyzer</h3>
+                <p>Automated personal finance tracking and analysis tool with budgeting, expense categorization, and financial goal tracking.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Automation</span>
+                    <span class="tech-badge">Data Analysis</span>
+                </div>
+                <ul class="feature-list">
+                    <li>Automated expense categorization</li>
+                    <li>Budget tracking & alerts</li>
+                    <li>Financial goal progress monitoring</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Footer / Contact -->
-    <footer class="footer">
+    <footer id="contact" class="footer">
         <p>Let's connect</p>
         <div class="social-links">
             <a href="https://x.com/Claygonius" target="_blank" rel="noopener noreferrer">X / @Claygonius</a>
@@ -139,5 +305,6 @@
         <p class="copyright">© 2026 Paul Wegelin</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

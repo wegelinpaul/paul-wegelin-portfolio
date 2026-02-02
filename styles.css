@@ -547,7 +547,7 @@ p {
    Stats Section
    ========================================================================== */
 .stats-section {
-    background: var(--bg-body);
+    background: var(--bg-card);
     padding: 80px 20px;
     position: relative;
 }
@@ -584,7 +584,7 @@ p {
     padding: 32px 24px;
     background: var(--bg-card);
     border-radius: 20px;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px var(--shadow);
 }
@@ -614,6 +614,10 @@ p {
 
 /* Dark mode specific adjustments for better visibility */
 @media (prefers-color-scheme: dark) {
+    .stats-section {
+        background: var(--bg-body);
+    }
+
     .stat-card {
         background: rgba(31, 41, 55, 0.5);
         border: 1px solid rgba(129, 140, 248, 0.2);
@@ -626,6 +630,10 @@ p {
 }
 
 /* Manual dark mode override */
+body:has(.theme-switch-input:checked) .stats-section {
+    background: var(--bg-body);
+}
+
 body:has(.theme-switch-input:checked) .stat-card {
     background: rgba(31, 41, 55, 0.5);
     border: 1px solid rgba(129, 140, 248, 0.2);

@@ -91,6 +91,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Lightbox for private project images
+    const privateImages = document.querySelectorAll('.private-card .project-image img');
+    privateImages.forEach(img => {
+        img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const overlay = document.createElement('div');
+            overlay.className = 'lightbox-overlay';
+
+            const closeBtn = document.createElement('button');
+            closeBtn.className = 'lightbox-close';
+            closeBtn.textContent = '\u00d7';
+            closeBtn.setAttribute('aria-label', 'Close image');
+
+            const fullImg = document.createElement('img');
+            fullImg.src = img.src;
+            fullImg.alt = img.alt;
+
+            overlay.appendChild(closeBtn);
+            overlay.appendChild(fullImg);
+            document.body.appendChild(overlay);
+
+            // Trigger animation
+            requestAnimationFrame(() => overlay.classList.add('active'));
+
+            const closeLightbox = () => {
+                overlay.classList.remove('active');
+                overlay.addEventListener('transitionend', () => overlay.remove());
+            };
+
+            overlay.addEventListener('click', closeLightbox);
+            closeBtn.addEventListener('click', closeLightbox);
+            document.addEventListener('keydown', function handler(e) {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                    document.removeEventListener('keydown', handler);
+                }
+            });
+        });
+    });
+
     // Animate stat numbers on scroll
     const statNumbers = document.querySelectorAll('.stat-number');
     const statsObserver = new IntersectionObserver((entries) => {

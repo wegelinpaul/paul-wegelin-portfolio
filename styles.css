@@ -169,22 +169,84 @@ body:has(.theme-switch-input:not(:checked)) {
     width: 100%;
 }
 
+/* Hamburger button - hidden on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-main);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger X animation when active */
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 /* Mobile menu styles */
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
     .nav-menu {
-        gap: 16px;
-        font-size: 0.85rem;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--nav-bg);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 0;
+        border-bottom: 1px solid var(--border-color);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .nav-menu.open {
+        max-height: 400px;
+        padding: 16px 0;
+    }
+
+    .nav-menu li {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu .nav-link {
+        display: block;
+        padding: 12px 20px;
+        font-size: 1rem;
     }
 
     .nav-logo {
         font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .nav-menu li:nth-child(3),
-    .nav-menu li:nth-child(4) {
-        display: none;
     }
 }
 
@@ -434,16 +496,29 @@ body:has(.theme-switch-input:not(:checked)) {
 /* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
     .skill-tag {
-        background: #1f2937;           /* darker bg */
-        color: #c7d2fe;                /* indigo-200 – slight accent */
-        border: 1px solid var(--accent);   /* uses your accent color (indigo) */
-        box-shadow: 0 0 0 1px var(--accent) inset; /* optional inner glow */
+        background: #1f2937;
+        color: #c7d2fe;
+        border: 1px solid var(--accent);
+        box-shadow: 0 0 0 1px var(--accent) inset;
     }
 
     .skill-tag:hover {
         background: #2d3748;
-        box-shadow: 0 0 12px rgba(99, 102, 241, 0.4); /* soft glow on hover */
+        box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
     }
+}
+
+/* Skill tags dark mode via toggle */
+body:has(.theme-switch-input:checked) .skill-tag {
+    background: #1f2937;
+    color: #c7d2fe;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 0 1px var(--accent) inset;
+}
+
+body:has(.theme-switch-input:checked) .skill-tag:hover {
+    background: #2d3748;
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
 }
 
 /* ==========================================================================

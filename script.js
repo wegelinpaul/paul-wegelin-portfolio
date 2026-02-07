@@ -162,8 +162,10 @@ function animateNumber(element) {
             clearInterval(timer);
         }
 
-        let displayValue = current.toFixed(1);
-        if (target >= 10 && !hasStar) {
+        let displayValue;
+        if (target % 1 !== 0) {
+            displayValue = current.toFixed(1);
+        } else {
             displayValue = Math.round(current);
         }
 

@@ -669,8 +669,10 @@ body:has(.theme-switch-input:checked) .stat-card:hover {
     position: absolute;
     top: 16px;
     right: 16px;
-    background: var(--accent-secondary);
-    color: #111;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #f3f4f6;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -678,7 +680,18 @@ body:has(.theme-switch-input:checked) .stat-card:hover {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     z-index: 3;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Light mode badge adjustment */
+body:has(.theme-switch-input:not(:checked)) .private-badge {
+    background: rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--text-heading);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .private-blur {
